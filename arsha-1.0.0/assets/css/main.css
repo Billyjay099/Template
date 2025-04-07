@@ -918,7 +918,9 @@ section,
   font-size: 25px;
   font-weight: 700;
   line-height: 56px;
+  text-align: center; /* Center the text */
 }
+
 
 .hero h4 {
   margin: 0;
