@@ -1,0 +1,5 @@
+{
+    "redirects": [
+      { "source": "/", "destination": "/arsha-1.0.0/index.html","permanent": true }
+    ]
+  }
