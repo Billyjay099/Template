@@ -51,7 +51,7 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">Agencies</a></li>
-          <li><a href="#services">Alerts</a></li>
+          <li><a href="#alerts">Alerts</a></li>
           <li><a href="#portfolio">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
           
@@ -61,28 +61,253 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+   <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+        <h1></h1>
+        <p>
+         ICT governance can be defined as a “framework for the leadership, organizational structures and business processes, standards and compliance to these standards, which ensure that the organization’s IT supports and enables the achievement of its strategies and objectives”.
+        </p>
+        <div class="d-flex"> 
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="assets/img/ict.jpg" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1></h1>
-            <p></p>
-            <div class="d-flex"> 
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/ict.jpg" class="img-fluid animated" alt="">
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/ict.jpg" class="img-fluid animated" alt="">
-            
-          </div>
+
+
+<section id="hero" class="hero section dark-background">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Left Text Column -->
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">  
+        <h1>Cybercrime Report</h1>
+        <p>
+          This pie chart illustrates the distribution of cybercrime-related reports or cases handled by key government agencies in the Philippines. It highlights the crucial roles of DICT, DOJ, NBI, and NPC in addressing cybersecurity incidents and safeguarding digital infrastructure.
+        </p>
+        <ul>
+          <li>
+            <strong>DICT (Department of Information and Communications Technology)</strong><br>
+            Cases Reported: <strong>13,000</strong><br>
+            Focuses on developing national policies and frameworks for cybersecurity and digital resilience.
+          </li>
+          <li>
+            <strong>DOJ (Department of Justice)</strong><br>
+            Cases Reported: <strong>2,500</strong><br>
+            Handles legal proceedings, cybercrime prosecution, and enforces cyber laws through its Cybercrime Office.
+          </li>
+          <li>
+            <strong>NBI (National Bureau of Investigation)</strong><br>
+            Cases Reported: <strong>12,808</strong><br>
+            Leads in digital forensics, investigation of cyber fraud, and high-profile cybercrime cases.
+          </li>
+          <li>
+            <strong><span style="color: #e74c3c;">⚠️ NPC (National Privacy Commission)</span></strong><br>
+            Cases Reported: <strong>6,847,611,386</strong> <em>(Likely representing total data exposure/records involved)</em><br>
+            Primarily addresses data privacy breaches and ensures compliance with the Data Privacy Act.<br>
+            <span style="color: #e74c3c; font-weight: bold;">Warning: Critical Data Exposure!</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Right Chart Column -->
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <!-- Replace image with canvas for Chart.js -->
+        <div style="background-color: #1e1e2f; padding: 20px; border-radius: 10px;">
+          <canvas id="pieChart" width="300" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Chart Initialization Script -->
+<script>
+  const ctx = document.getElementById('pieChart').getContext('2d');
+  const pieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['DICT', 'DOJ', 'NBI', 'NPC'],
+      datasets: [{
+        data: [13000, 2500, 12808, 6847611386], // Corrected data with NPC value
+        backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#e74c3c'] // Red color applied to NPC (critical warning)
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: 'white' // Legend text color for dark background
+          }
+        }
+      }
+    }
+  });
+</script>
+    </section><!-- /Hero Section -->
+
+
+
+
+   <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      
+      <!-- Left Text Column -->
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+        <h1 style="color: white;">Active ICT Projects</h1>
+        <p style="color: white;">
+          <!-- You can add a short intro here -->
+        </p>
+        <ul style="color: white; list-style-type: disc; padding-left: 20px;">
+          <li>
+            <strong>DICT:</strong><br>
+            <strong>Free Wifi for All</strong><br>
+          </li>
+          <li>
+            <strong>DOJ:</strong><br>
+            <strong>Cybercrime Investigation Training</strong><br>
+          </li>
+          <li>
+            <strong>NBI:</strong><br>
+            <strong>Security Management Console Logs Server</strong><br>
+            <strong>Next Generation Firewall for NBI Buidling Recolation</strong><br>
+          </li>
+          <li>
+            <strong>NPC:</strong><br>
+            <strong>Data Privacy Competency Program</strong><br>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Chart Column -->
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <div style="background-color: #1e1e2f; padding: 20px; border-radius: 10px;">
+          <canvas id="marketSharePieChart" width="300" height="300"></canvas>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </div>
+  </div>
+</section>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Chart Initialization Script -->
+<script>
+  const ctxx = document.getElementById('marketSharePieChart').getContext('2d');
+
+  const marketSharePieChart = new Chart(ctxx, {
+    type: 'pie',
+    data: {
+      labels: ['DICT', 'DOJ', 'NBI', 'NPC'],
+      datasets: [{
+        data: [1, 1, 1, 2],
+        backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: 'white'
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Left Text Column -->
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1> Free Wifi</h1>
+            <p>Wi-Fi usage data for various regions under the DICT initiative.</p>
+            <ul>
+              <li>
+                <strong>DICT</strong><br>
+                <strong>13,000</strong><br>
+                Number of Wi-Fi connections in DICT.
+              </li>
+              <li>
+                <strong>DOJ</strong><br>
+                <strong>12,808</strong><br>
+                Number of Wi-Fi connections in DOJ.
+              </li>
+              <li>
+                <strong><span style="color: #e74c3c;">⚠️NBI</strong><br>
+                <strong>6,847,611,386</strong><br>
+                Number of Wi-Fi connections in NBI.
+                <span style="color: #e74c3c; font-weight: bold;">Warning: Critical Data Exposure!</span>
+              </li>
+              <li>
+                <strong>NPC</strong><br>
+                <strong>5,000</strong><br>
+                Number of Wi-Fi connections in NPC.
+              </li>
+            </ul>
+          </div>
+    
+          <!-- Right Chart Column -->
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <!-- New Pie chart for Wi-Fi Usage by Region -->
+            <div style="background-color: #1e1e2f; padding: 20px; border-radius: 10px;">
+              <canvas id="wifiRegionPieChart" width="300" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chart Initialization Script -->
+    <script>
+      // Wait until the document is fully loaded before initializing the chart
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById('wifiRegionPieChart').getContext('2d');
+    
+        const wifiRegionPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['DICT', 'DOJ', 'NBI', 'NPC'],
+            datasets: [{
+              data: [13000, 12808, 6847611386, 5000], // Adjust data values to reflect actual usage
+              backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56'], // Custom pie slice colors
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                labels: {
+                  color: 'white' // Legend text color for dark background
+                }
+              }
+            }
+          }
+        });
+      });
+    </script>
+    
 
     <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
@@ -140,25 +365,10 @@
         <h2>Agencies</h2>
       </div><!-- End Section Title -->
 
-      <div class="container">
 
-        <div class="row gy-4">
+       
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span></span></li>
-              <li><i class="bi bi-check2-circle"></i> <span></span></li>
-              <li><i class="bi bi-check2-circle"></i> <span></span></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p></p>
-            <a href="#" ><span></i></a>
-          </div>
+      
 
         </div>
 
@@ -189,8 +399,8 @@
                 <h3><span>General Statistics</span> </h3>
                 <div class="faq-content">
                   <p>Total Cybercrime Cases (Year-to-Date): In 2024, the DICT processed approximately 2,500 cybersecurity cases, with 60 attributed to state-level hackers employing advanced techniques.Number of Active ICT Projects: Specific figures on active ICT projects are not readily available. However, the DICT has been involved in numerous initiatives aimed at improving the country's digital infrastructure and services. 
-                    Free Wi-Fi Access Points Installed: As of November 2024, over 13,000 free Wi-Fi sites had been established nationwide, with 16,251 access points installed. 
-                    Status Indicators: The DICT continually monitors and updates its systems to address cybersecurity threats, processing millions of cyber threats daily to safeguard government and public networks. 
+                    Free Wi-Fi Access Points Installed: • As of November 2024, over 13,000 free Wi-Fi sites had been established nationwide, with 16,251 access points installed. 
+                    Status Indicators: • The DICT continually monitors and updates its systems to address cybersecurity threats, processing millions of cyber threats daily to safeguard government and public networks. 
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -200,9 +410,9 @@
                 <h3><span>General Information
                 </span></h3>
                 <div class="faq-content">
-                  <p>The Logo uses curve radiating lines to represent the pulsating radio waves or frequencies, with the lines using the tri-colors of the National Flag: red, white, and blue. At the center of the sphere is the yellow silhouette of the map of the Philippines, in lieu of the yellow sun and stars of the Philippine Flag.
-                    The curve lines outside the map also indicate the sometimes placid or surging waters of the Philippine archipelago, evoking the feeling of dynamism brought about by ICT. The 17 connected dots within the silhouette of the map represent the 17 Philippine/DICT regions connected by technology. The numbers around the spherical Logo are the binary equivalent of the acronym DICT and 2016, the year the Department was established under Republic Act (R.A.) No. 10844.
-                    The straight lines radiating from the spherical Logo and intersecting the acronym DICT (outside the sphere) represent the frequency waves as they travel through space in straight lines; they also represent the encompassing reach of ICT and telecommunications. The colored sphere is not circumscribed because communications, the service, are without borders.
+                  <p> The Logo uses curve radiating lines to represent the pulsating radio waves or frequencies, with the lines using the tri-colors of the National Flag: red, white, and blue. At the center of the sphere is the yellow silhouette of the map of the Philippines, in lieu of the yellow sun and stars of the Philippine Flag.
+                     The curve lines outside the map also indicate the sometimes placid or surging waters of the Philippine archipelago, evoking the feeling of dynamism brought about by ICT. The 17 connected dots within the silhouette of the map represent the 17 Philippine/DICT regions connected by technology. The numbers around the spherical Logo are the binary equivalent of the acronym DICT and 2016, the year the Department was established under Republic Act (R.A.) No. 10844.
+                     The straight lines radiating from the spherical Logo and intersecting the acronym DICT (outside the sphere) represent the frequency waves as they travel through space in straight lines; they also represent the encompassing reach of ICT and telecommunications. The colored sphere is not circumscribed because communications, the service, are without borders.
                     </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -212,10 +422,10 @@
                 <h3><span>List of Responsibilities</span> 
                 </h3>
                 <div class="faq-content">
-                  <p>Develop and implement national ICT policies and guidelines.
-                    Promote digital literacy and ICT education.
-                    Enhance cybersecurity measures and protect critical ICT infrastructures.
-                    Provide equitable access to ICT services across the country.
+                  <p> Develop and implement national ICT policies and guidelines.
+                     Promote digital literacy and ICT education.
+                      Enhance cybersecurity measures and protect critical ICT infrastructures.
+                      Provide equitable access to ICT services across the country.
                     Foster the growth of ICT-enabled industries.
                     
                     </p>
@@ -261,9 +471,7 @@
 
                 <h3><span>General Statistics</span></h3>
                 <div class="faq-content">
-                  <p>Total Cybercrime Cases (Year-to-Date): In 2024, the DICT processed approximately 2,500 cybersecurity cases, with 60 attributed to state-level hackers employing advanced techniques.Number of Active ICT Projects: Specific figures on active ICT projects are not readily available. However, the DICT has been involved in numerous initiatives aimed at improving the country's digital infrastructure and services. 
-                    Free Wi-Fi Access Points Installed: As of November 2024, over 13,000 free Wi-Fi sites had been established nationwide, with 16,251 access points installed. 
-                    Status Indicators: The DICT continually monitors and updates its systems to address cybersecurity threats, processing millions of cyber threats daily to safeguard government and public networks. 
+                  <p> Total Cybercrime Cases (e.g., YTD): Specific year-to-date statistics on total cybercrime cases handled by the DOJ are not readily available in the provided sources. However, during the enhanced community quarantine in 2020, reports of online child sexual exploitation nearly tripled, indicating a significant rise in cybercrime incidents during that period.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -273,7 +481,7 @@
                 <h3><span>General Information
                 </span></h3>
                 <div class="faq-content">
-                  <p>The DOJ's seal features three stars representing the Philippines' main geographical regions. A balanced scale over a sword symbolizes justice and authority, set against a map of the Philippines. The Latin phrase "Justitiae Pax Opus" translates to "Justice for All."
+                  <p> The DOJ's seal features three stars representing the Philippines' main geographical regions. A balanced scale over a sword symbolizes justice and authority, set against a map of the Philippines. The Latin phrase "Justitiae Pax Opus" translates to "Justice for All."
                      
                     </p>
 
@@ -285,10 +493,10 @@
                 <h3><span>List of Responsibilities
                 </span></h3>
                 <div class="faq-content">
-                  <p>Investigating crimes and prosecuting offenders. Providing legal counsel to government agencies
-                    Implementing laws related to immigration and citizenship.    
-                    Overseeing corrections and rehabilitation of offenders
-                    Handling international legal cooperation, including extradition and mutual legal assistance.              
+                  <p> Investigating crimes and prosecuting offenders. Providing legal counsel to government agencies
+                     Implementing laws related to immigration and citizenship.    
+                      Overseeing corrections and rehabilitation of offenders
+                     Handling international legal cooperation, including extradition and mutual legal assistance.              
                     </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -310,7 +518,99 @@
 
     </section><!-- /Why Us Section -->
 
-    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <!-- Image Section -->
+      <div class="col-lg-6 d-flex align-items-center">
+        <img src="assets/img/Nbi.webp" class="img-fluid" alt="NPC Image">
+      </div>
+
+      <!-- Content Section -->
+      <div class="col-lg-6 pt-4 pt-lg-0 content">
+        <h3 class="section-title"></h3>
+        <p class="fst-italic">
+          (NBI) Established on November 13, 1936, the National Bureau of Investigation (NBI) is a premier investigative agency under the Department of Justice (DOJ) in the Philippines. Patterned after the United States' FBI, the NBI is tasked with investigating and combating various crimes, including cybercrime, human trafficking, organized crime, corruption, and terrorism. It also provides technical forensic services and intelligence gathering to support the Philippine criminal justice system. The NBI's mission is to uphold justice through impartial, efficient, and accountable investigative services.
+        </p>
+
+        <!-- Skills Content with Independent Dropdowns -->
+        <div class="skills-content skills-animation">
+          
+          <!-- General Statistics -->
+          <div class="accordion mb-3" id="accordionStatistics">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingStatistics">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatistics" aria-expanded="true" aria-controls="collapseStatistics">
+                  <p class="val m-0" style="color: blue;">General Statistics</p>
+                </button>
+              </h2>
+              <div id="collapseStatistics" class="accordion-collapse collapse show" aria-labelledby="headingStatistics" data-bs-parent="#accordionStatistics">
+                <div class="accordion-body">
+                  <p>Total Cybercrime Cases (Year-to-Date):<br>
+                    Specific year-to-date statistics for cybercrime cases handled by the NBI are not publicly detailed. However,<br>
+                    the Philippine National Police (PNP) reported a 36% decrease in cybercrime cases in the first half of 2024,<br>
+                    with 8,177 complaints from January to June, down from 12,808 in the same period in 2023.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- General Information -->
+          <div class="accordion mb-3" id="accordionInformation">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingInformation">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformation" aria-expanded="false" aria-controls="collapseInformation">
+                  <p class="val m-0" style="color: blue;">General Information</p>
+                </button>
+              </h2>
+              <div id="collapseInformation" class="accordion-collapse collapse" aria-labelledby="headingInformation" data-bs-parent="#accordionInformation">
+                <div class="accordion-body">
+                  <p>
+                     The NBI's seal features a shield symbolizing protection, with the Philippine sun and three stars representing the nation. A balanced scale signifies justice, and the sword denotes authority and enforcement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- List of Responsibilities -->
+          <div class="accordion" id="accordionResponsibilities">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingResponsibilities">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResponsibilities" aria-expanded="false" aria-controls="collapseResponsibilities">
+                  <p class="val m-0" style="color: blue;">List of Responsibilities</p>
+                </button>
+              </h2>
+              <div id="collapseResponsibilities" class="accordion-collapse collapse" aria-labelledby="headingResponsibilities" data-bs-parent="#accordionResponsibilities">
+                <div class="accordion-body">
+                  <p>
+                     Investigate major high-profile cases and offenses against Philippine laws.<br>
+                     Conduct forensic examinations and provide technical services.<br>
+                     Collect and analyze intelligence related to criminal activities.<br>
+                     Monitor and ensure compliance with international data protection standards.<br>
+                    Collaborate with local and international law enforcement agencies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End Skills Content -->
+      </div><!-- End Content Section -->
+    </div><!-- End Row -->
+  </div><!-- End Container -->
+</section><!-- End Skills Section -->
+
+
+
+
+
+
+
+
+
 <section id="skills" class="skills section">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row">
@@ -326,82 +626,82 @@
           (NPC) The NPC serves as the country's privacy watchdog, tasked with enforcing the Data Privacy Act of 2012 and ensuring the Philippines' compliance with international data protection standards. 
         </p>
 
-        <!-- Skills Content with Dropdown -->
+        <!-- Skills Content with Dropdowns -->
         <div class="skills-content skills-animation">
           
-          <!-- Skill 1: HTML (Dropdown) -->
-          <!-- Skill: List of Responsibilities (Dropdown) -->
-    </h2>
-    <!-- Skill: List of Responsibilities (Dropdown) -->
-<div class="accordion" id="accordionResponsibilities">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingResponsibilities">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResponsibilities" aria-expanded="true" aria-controls="collapseResponsibilities">
-        <p class="val m-0" style="color: blue;">General Statistics</p> <!-- Added inline style to change text color to blue -->
-      </button>
-
-      </button>
-    </h2>
-    <div id="collapseResponsibilities" class="accordion-collapse collapse show" aria-labelledby="headingResponsibilities" data-bs-parent="#accordionResponsibilities">
-      <div class="accordion-body">
-        <p>Total Cybercrime Cases (Year-to-Date): As of August 31, 2024, the NPC reported a total of 6,847,611,386 security incidents from 2018 to 2023.<br>
-          Number of Active ICT Projects: The NPC is actively involved in various projects, including the Data Privacy Competency Program aimed at enhancing data privacy education in the Philippines.<br>
-          Free Wi-Fi Access Points Installed: The installation of free Wi-Fi access points is managed by the Department of Information and Communications Technology (DICT), not the NPC. <br>
-          Status Indicators: The NPC continually monitors and updates its systems to address data privacy concerns and ensure compliance with regulations. <br>
-        </p>
-      </div>
-    </div>
-  </div>
-</div><!-- End List of Responsibilities -->
-
-
-          <!-- Skill 2: CSS (Dropdown) -->
-          <div class="accordion" id="accordionResponsibilities">
+          <!-- General Statistics -->
+          <div class="accordion mb-3" id="accordionStatistics">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingResponsibilities">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResponsibilities" aria-expanded="true" aria-controls="collapseResponsibilities">
+              <h2 class="accordion-header" id="headingStatistics">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatistics" aria-expanded="true" aria-controls="collapseStatistics">
+                  <p class="val m-0" style="color: blue;">General Statistics</p>
+                </button>
+              </h2>
+              <div id="collapseStatistics" class="accordion-collapse collapse show" aria-labelledby="headingStatistics" data-bs-parent="#accordionStatistics">
+                <div class="accordion-body">
+                  <p>
+                     As of August 31, 2024, the NPC reported a total of 6,847,611,386 security incidents from 2018 to 2023.<br>
+                     Number of Active ICT Projects: The NPC is actively involved in various projects, including the Data Privacy Competency Program aimed at enhancing data privacy education in the Philippines.<br>
+                     Free Wi-Fi Access Points Installed: The installation of free Wi-Fi access points is managed by the Department of Information and Communications Technology (DICT), not the NPC.<br>
+                     Status Indicators: The NPC continually monitors and updates its systems to address data privacy concerns and ensure compliance with regulations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- General Information -->
+          <div class="accordion mb-3" id="accordionInformation">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingInformation">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformation" aria-expanded="false" aria-controls="collapseInformation">
                   <p class="val m-0" style="color: blue;">General Information</p>
                 </button>
               </h2>
-              <div id="collapseResponsibilities" class="accordion-collapse collapse show" aria-labelledby="headingResponsibilities" data-bs-parent="#accordionResponsibilities">
+              <div id="collapseInformation" class="accordion-collapse collapse" aria-labelledby="headingInformation" data-bs-parent="#accordionInformation">
                 <div class="accordion-body">
-                  <p>A pearl buried inside a tightly-shut shell is practically worthless. Government information is a pearl, meant to be shared with the public in order to maximize its inherent value. The Transparency Seal, depicted by a pearl shining out of an open shell, is a symbol of a policy shift towards openness in access to government information. On the one hand, it hopes to inspire Filipinos in the civil service to be more open to citizen engagement; on the other, to invite the Filipino citizenry to exercise their right to participate in governance.
-                    This initiative is envisioned as a step in the right direction towards solidifying the position of the Philippines as the Pearl of the Orient – a shining example for democratic virtue in the region.
-                    <br>
-                  
+                  <p>
+                     A pearl buried inside a tightly-shut shell is practically worthless. Government information is a pearl, meant to be shared with the public in order to maximize its inherent value.<br>
+                     The Transparency Seal, depicted by a pearl shining out of an open shell, is a symbol of a policy shift towards openness in access to government information.<br>
+                     This initiative is envisioned as a step in the right direction towards solidifying the position of the Philippines as the Pearl of the Orient – a shining example for democratic virtue in the region.
                   </p>
                 </div>
               </div>
             </div>
-          </div><!-- End List of General Information -->
+          </div>
 
-          <!-- Skill 3: JavaScript (Dropdown) -->
+          <!-- List of Responsibilities -->
           <div class="accordion" id="accordionResponsibilities">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingResponsibilities">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResponsibilities" aria-expanded="true" aria-controls="collapseResponsibilities">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResponsibilities" aria-expanded="false" aria-controls="collapseResponsibilities">
                   <p class="val m-0" style="color: blue;">List of Responsibilities</p>
                 </button>
               </h2>
-              <div id="collapseResponsibilities" class="accordion-collapse collapse show" aria-labelledby="headingResponsibilities" data-bs-parent="#accordionResponsibilities">
+              <div id="collapseResponsibilities" class="accordion-collapse collapse" aria-labelledby="headingResponsibilities" data-bs-parent="#accordionResponsibilities">
                 <div class="accordion-body">
-                  <p>Issue compliance or enforcement orders.<br>
-                    Award indemnity on matters affecting personal data or rights of data subjects.<br>
-                    Issue cease and desist orders or impose bans on data processing detrimental to national security or public interest.<br>
-                    Monitor and ensure compliance with international data protection standards. <br>
-                    Conduct compliance checks, privacy sweeps, and on-site visits to assess adherence to data privacy regulations. 
+                  <p>
+                     Issue compliance or enforcement orders.<br>
+                     Award indemnity on matters affecting personal data or rights of data subjects.<br>
+                     Issue cease and desist orders or impose bans on data processing detrimental to national security or public interest.<br>
+                     Monitor and ensure compliance with international data protection standards.<br>
+                     Conduct compliance checks, privacy sweeps, and on-site visits to assess adherence to data privacy regulations.
                   </p>
                 </div>
               </div>
             </div>
-          </div><!-- End List of Responsibilities -->
-        </div>
+          </div>
+
+        </div><!-- End Skills Content -->
+
       </div><!-- End Content Section -->
     </div><!-- End Row -->
   </div><!-- End Container -->
 </section><!-- End Skills Section -->
 
-            </div>
+
+
+       </div>
 
           </div>
         </div>
@@ -410,175 +710,101 @@
 
     </section><!-- /Skills Section -->
 
+   
+   
+   
+   
+
+
+        
+   
+  
+
+   
     <!-- Services Section -->
-    <section id="services" class="services section light-background">
+<section id="alerts" class="services section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Alerts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2>Cybersecurity Alerts</h2>
+    <p>Stay alert and informed about recent cyber threats and security issues</p>
+  </div><!-- End Section Title -->
 
-      <div class="container">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 justify-content-center text-center">
 
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item -->
-
+      <!-- Phishing Alert -->
+      <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex flex-column align-items-center text-center p-3 w-100 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-envelope-exclamation-fill text-warning fs-1"></i>
+          </div>
+          <h4><a href="#" class="stretched-link">Phishing Attempt</a></h4>
+          <p>Beware of fake emails asking for login credentials. Do not click suspicious links.</p>
         </div>
-
       </div>
 
-    </section><!-- /Services Section -->
-
-    <!-- Work Process Section -->
-    <section id="work-process" class="work-process section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Work Process</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="steps-item">
-              <div class="steps-image">
-                <img src="assets/img/steps/steps-1.webp" alt="Step 1" class="img-fluid" loading="lazy">
-              </div>
-              <div class="steps-content">
-                <div class="steps-number">01</div>
-                <h3>Research &amp; Analysis</h3>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
-                <div class="steps-features">
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Market Research</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Data Analysis</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>User Feedback</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Steps Item -->
+      <!-- Malware Alert -->
+      <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex flex-column align-items-center text-center p-3 w-100 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-bug-fill text-danger fs-1"></i>
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="steps-item">
-              <div class="steps-image">
-                <img src="assets/img/steps/steps-2.webp" alt="Step 2" class="img-fluid" loading="lazy">
-              </div>
-              <div class="steps-content">
-                <div class="steps-number">02</div>
-                <h3>Design &amp; Planning</h3>
-                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                <div class="steps-features">
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Wireframing</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>UI/UX Design</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Prototyping</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Steps Item -->
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="steps-item">
-              <div class="steps-image">
-                <img src="assets/img/steps/steps-3.webp" alt="Step 3" class="img-fluid" loading="lazy">
-              </div>
-              <div class="steps-content">
-                <div class="steps-number">03</div>
-                <h3>Development &amp; Launch</h3>
-                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
-                <div class="steps-features">
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Development</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Testing</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle"></i>
-                    <span>Deployment</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Steps Item -->
-          </div>
-
+          <h4><a href="#" class="stretched-link">Malware Detected</a></h4>
+          <p>System scan identified a malware threat. Update your antivirus software immediately.</p>
         </div>
-
       </div>
 
-    </section><!-- /Work Process Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/bg/bg-8.webp" alt="">
-
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <!-- Unauthorized Access Alert -->
+      <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex flex-column align-items-center text-center p-3 w-100 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-person-lock text-danger fs-1"></i>
           </div>
-          <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
+          <h4><a href="#" class="stretched-link">Unauthorized Access</a></h4>
+          <p>Unrecognized device login attempt blocked. Please review your recent account activity.</p>
         </div>
-
       </div>
+
+      <!-- Data Breach Notification -->
+      <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex flex-column align-items-center text-center p-3 w-100 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-shield-lock-fill text-primary fs-1"></i>
+          </div>
+          <h4><a href="#" class="stretched-link">Data Breach Notice</a></h4>
+          <p>Some user information may have been exposed. Reset your password and enable 2FA.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /Cybercrime Alerts Section -->
+
+
+
+
+
+   <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section dark-background">
+
+  <img src="assets/img/bg/bg-8.webp" alt="">
+
+  <div class="container">
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-9 text-center text-xl-start">
+        <h3>Call To Action</h3>
+        <p></p>
+      </div>
+      <div class="col-xl-3 cta-btn-container text-center">
+        <a class="cta-btn d-inline-block text-center py-2 px-4" href="#hero">Home Page</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
     </section><!-- /Call To Action Section -->
 
@@ -588,7 +814,10 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><strong>These government agencies are working together to strengthen the country’s digital infrastructure and cybersecurity.</strong></p>
+    
+      <p><strong>Their projects focus on expanding internet access, protecting personal data, and enhancing digital investigation capabilities to ensure a safer and more connected society.</strong></p>
+
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -597,98 +826,78 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter=".filter-app">DICT</li>
+            <li data-filter=".filter-branding">DOJ</li>
+            <li data-filter=".filter-product">NPC</li>
+            <li data-filter=".filter-branding1">NBI</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-1.webp" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/npcpic.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-1.webp" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Data Privacy Competency Program</h4>
+                <p>Launched in 2024</p>
+                <a href="assets/img/portfolio/npcpic.jpg" title="NPC" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="npc-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/dojpic.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-3.webp" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Cybercrime Investigation Training</h4>
+                <p>launched in 2024</p>
+                <a href="assets/img/portfolio/dojpic.jpg" title="DOJ" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="doj-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/dictpic.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-4.webp" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Free Wi-Fi for All Program</h4>
+                <p>Launched in 2017</p>
+                <a href="assets/img/portfolio/dictpic.jpg" title="DICT" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="dict-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding1">
+              <img src="assets/img/portfolio/nbi1.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-2.webp" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Security Management Console Logs Server​</h4>
+                <p></p>
+                <a href="assets/img/portfolio/nbi1.png" title="NBI" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="nbi-deatails-1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/portfolio-portrait-3.webp" class="img-fluid" alt="">
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding1">
+              <img src="assets/img/portfolio/nbi2.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-3.webp" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Next Generation Firewall for NBI Building Relocation​</h4>
+                <p></p>
+                <a href="assets/img/portfolio/nbi2.webp" title="NBI" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="nbi-deatails-2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
+          
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-7.webp" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+            
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-8.webp" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+              
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <p></p>
                 <a href="assets/img/portfolio/portfolio-9.webp" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -701,14 +910,19 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-
+   
+   
+   
+   
+   
+   
     <!-- Team Section -->
     <section id="team" class="team section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -717,71 +931,75 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-m-7.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/person/" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
+                <h4>Camacho Daniel</h4>
+                <span>Researcher</span>
+                <p></p>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-f-8.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/person/Catina.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
+                <h4>Catina Judith</h4>
+                <span>Researcher</span>
+                <p></p>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-m-6.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/person/Elumbra.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
+                <h4>Elumbra Jonalyn</h4>
+                <span>Developer</span>
+                <p></p>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-f-4.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/person/Maligaya.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                <h4>Maligaya Meriyana</h4>
+                <span>Researcher</span>
+                <p></p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/person" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Palahang Ralph</h4>
+                <span>Researcher</span>
+                <p></p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/person/Tenoria.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Tenoria Billy Jay</h4>
+                <span>Developer</span>
+                <p></p>
                 </div>
               </div>
             </div>
           </div><!-- End Team Member -->
+
+
 
         </div>
 
@@ -790,531 +1008,303 @@
     </section><!-- /Team Section -->
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing section light-background">
+    <!-- List of References -->
+<div class="accordion" id="accordionReferences">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingReferences">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReferences" aria-expanded="false" aria-controls="collapseReferences">
+        <p class="val m-0" style="color: green;">References</p>
+      </button>
+    </h2>
+    <div id="collapseReferences" class="accordion-collapse collapse" aria-labelledby="headingReferences" data-bs-parent="#accordionReferences">
+      <div class="accordion-body">
+        <ul>
+         
+          <li>DICT<a href=" https://tribune.net.ph/2025/03/01/dict-says-it-foiled-54-m-cyber-attacks
+            ">Statistics</a></li>
+         
+          <li>DICT <a href="https://www.philstar.com/headlines/2025/03/10/2427336/whats-next-free-wi-fi-program-dict-explores-cost-effective-revamp">Free Wifi</a></li>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
+          <li>DICT<a href="https://dict.gov.ph/home">Introduction</a></li>
+          
+          <li>DICT<a href="https://www.wheninmanila.com/look-the-official-dict-logo-is-now-out">Logo</a></li>
+         
+          <li>DICT<a href="https://dict.gov.ph/contact-us">Contact</a></li>
+      
+        </ul>
       </div>
+    </div>
+  </div>
+</div>
 
+       
+<div id="collapseReferences" class="accordion-collapse collapse" aria-labelledby="headingReferences" data-bs-parent="#accordionReferences">
+  <div class="accordion-body">
+    <ul>
+     
+      <li>DOJ<a href=" Cybercrime Division
+        ">Statistics</a></li>
+     
+      <li>DOJ<a href="https://cybercrime.doj.gov.ph ">Introduction</a></li>
+      
+      <li>DOJ<a href="Department of Justice">Logo</a></li>
+   
+      <li>DOJ<a href="Cybercrime Division
+      ">Responsibilities</a></li>
+
+      <li>DOJ<a href="https://www.doj.gov.ph/contact.html
+        ">Contact</a></li>
+ 
+      <div id="collapseReferences" class="accordion-collapse collapse" aria-labelledby="headingReferences" data-bs-parent="#accordionReferences">
+        <div class="accordion-body">
+          <ul>
+           
+            <li>NBI<a href="Philippine News Agency
+              ">Statistics</a></li>
+           
+            <li>NBI<a href="DOJ Philippines+2Office of Cybercrime+2nbi.gov.ph+2 ">Responsibilities</a></li>
+  
+          
+      <div id="collapseReferences" class="accordion-collapse collapse" aria-labelledby="headingReferences" data-bs-parent="#accordionReferences">
+        <div class="accordion-body">
+          <ul>
+           
+            <li>NPC<a href="https://l1nq.com/fPnXr
+              ">Statistics</a></li>
+           
+              <li>NPC<a href="https://www.linkedin.com/company/privacygovp
+
+                ">Introduction</a></li>
+           
+              <li>NPC<a href="https://privacy.gov.ph/transparency-seal/#:~:text=Symbolism,VISION%20AND%20LIST%20OF%20OFFICIALS
+              ">Logo</a></li>
+      
+              <li>NPC<a href="https://privacy.gov.ph/powers-functions
+
+                ">Responsibilities</a></li>
+
+
+                <li>NPC<a href="https://privacy.gov.ph/powers-functions
+
+                  ">Responsibilities</a></li>
+
+
+                  <li>NPC<a href="https://www.dtcc.com/national-privacy-commission
+
+                    ">Responsibilities</a></li>
+  
+                      
+                    
+                  <li>NPC<a href="  https://privacy.gov.ph/wp-content/uploads/2025/02/NPC-FY-2023-ANNUAL-REPORT.pdf
+
+                    ">Responsibilities</a></li>
+
+
+                  
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
     </section><!-- /Pricing Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Faq 2 Section -->
-    <section id="faq-2" class="faq-2 section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq 2 Section -->
-
-    <!-- Subscribe Section -->
-    <section id="subscribe" class="subscribe section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6">
-            <div class="cta-content" data-aos="fade-up" data-aos-delay="200">
-              <h2>Subscribe to our newsletter</h2>
-              <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit.</p>
-              <form action="forms/newsletter.php" method="post" class="php-email-form cta-form" data-aos="fade-up" data-aos-delay="300">
-                <div class="input-group mb-3">
-                  <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" aria-describedby="button-subscribe">
-                  <button class="btn btn-primary" type="submit" id="button-subscribe">Subscribe</button>
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="cta-image" data-aos="zoom-out" data-aos-delay="200">
-              <img src="assets/img/cta/cta-1.webp" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Subscribe Section -->
-
-    <!-- Recent Blog Postst Section -->
-    <section id="recent-blog-postst" class="recent-blog-postst section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-1.webp" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-2.webp" class="img-fluid" alt="">
-                <span class="post-date">July 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-3.webp" class="img-fluid" alt="">
-                <span class="post-date"></span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title"></h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Recent Blog Postst Section -->
-
-    <!-- Contact Section -->
     <section id="contact" class="contact section">
-
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title text-center" data-aos="fade-up">
         <h2>Contact</h2>
         <p></p>
       </div><!-- End Section Title -->
-
+    
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3</h3>
-                  <p></p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4 text-center">
+    
+              <!-- Location Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Location</h3>
+                  <p>DICT Building, C.P. Garcia Ave.,<br>Diliman, Quezon City, Philippines</p>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3></h3>
-                  <p></p>
+              </div>
+    
+              <!-- Phone Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Phone</h3>
+                  <p>(+63) 2 8920 0101</p>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3></h3>
-                  <p></p>
+              </div>
+    
+              <!-- Email Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>info@dict.gov.ph</p>
                 </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-       
-
-        </div>
-
+              </div>
+    
+              <!-- Working Hours Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-clock"></i>
+                  <h3>Office Hours</h3>
+                  <p>Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+    
+            </div><!-- End Inner Row -->
+          </div><!-- End col-lg-10 -->
+        </div><!-- End Outer Row -->
       </div>
+    </section>
+    
+    
 
-    </section><!-- /Contact Section -->
+    
+      
+    
+    
+    
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>DOJ</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4 text-center">
+    
+              <!-- Location Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Location</h3>
+                  <p>Padre Faura Street,<br>Ermita, Manila 1000, Philippines</p>
+                </div>
+              </div>
+    
+              <!-- Phone Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Phone</h3>
+                  <p>(+632) 8523 8481</p>
+                </div>
+              </div>
+    
+              <!-- Email Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>doj@doj.gov.ph</p>
+                </div>
+              </div>
+    
+              <!-- Office Hours Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-clock"></i>
+                  <h3>Office Hours</h3>
+                  <p>Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+    
+            </div><!-- End Inner Row -->
+          </div><!-- End col-lg-10 -->
+        </div><!-- End Outer Row -->
+      </div>
+    </section>
+    
 
-  </main>
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>NPC</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4 text-center">
+    
+              <!-- Location Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Location</h3>
+                  <p>National Police Commission (NPC) Building, Quezon City, Philippines</p>
+                </div>
+              </div>
+    
+              <!-- Phone Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Phone</h3>
+                  <p>(+63) 2 924 1001</p>
+                </div>
+              </div>
+    
+              <!-- Email Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>info@npc.gov.ph</p>
+                </div>
+              </div>
+    
+              <!-- Working Hours Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="info-item">
+                  <i class="bi bi-clock"></i>
+                  <h3>Office Hours</h3>
+                  <p>Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+    
+            </div><!-- End Inner Row -->
+          </div><!-- End col-lg-10 -->
+        </div><!-- End Outer Row -->
+      </div>
+    </section>
+    
 
-  <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4></h4>
-            <p></p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading"></div>
-              <div class="error-message"></div>
-              <div class="sent-message"></div>
-            </form>
-          </div>
-        </div>
+ <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section dark-background">
+
+  <img src="assets/img/bg/bg-8.webp" alt="">
+
+  <div class="container">
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-9 text-center text-xl-start">
+        <h3>Call To Action</h3>
+        <p></p>
+      </div>
+      <div class="col-xl-3 cta-btn-container text-center">
+        <a class="cta-btn d-inline-block text-center py-2 px-4" href="#hero">Home Page</a>
       </div>
     </div>
+  </div>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Arsha</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p></p>
-            <p></p>
-            <p class="mt-3"><strong></strong> <span></span></p>
-            <p><strong></strong> <span></span></p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4></h4>
-          <p</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Arsha</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-      </div>
-    </div>
-
-  </footer>
+</section>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

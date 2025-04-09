@@ -855,7 +855,7 @@ section,
 }
 
 .hero-img img {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease;
